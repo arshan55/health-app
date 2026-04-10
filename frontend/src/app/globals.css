@@ -282,20 +282,6 @@ h1, h2, h3 {
 }
 
 /* Dark mode: handle hardcoded white/light inline backgrounds */
-[data-theme='dark'] .chat-messages-pane {
-  background: #0f172a !important;
-}
-
-[data-theme='dark'] .chat-input-bar {
-  background: #0f172a !important;
-  border-top-color: rgba(51, 65, 85, 0.8) !important;
-}
-
-[data-theme='dark'] .assistant-bubble {
-  background: #1e293b !important;
-  border-color: rgba(51, 65, 85, 0.8) !important;
-  color: var(--foreground) !important;
-}
 
 [data-theme='dark'] .food-log-item {
   background: #0f172a !important;

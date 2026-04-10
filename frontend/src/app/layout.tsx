@@ -33,8 +33,7 @@ export default function RootLayout({
             <ul className="nav-links">
               <li><Link href="/" className="nav-link">Dashboard</Link></li>
               <li><Link href="/log" className="nav-link">Log Food</Link></li>
-              <li><Link href="/chat" className="nav-link">AI Assistant</Link></li>
-              <li><Link href="/simulator" className="nav-link">Simulator</Link></li>
+<li><Link href="/simulator" className="nav-link">Simulator</Link></li>
               <li style={{ display: 'flex', alignItems: 'center', borderLeft: '1px solid var(--border)', paddingLeft: '1rem', marginLeft: '0.5rem' }}>
                 <ThemeToggle />
               </li>

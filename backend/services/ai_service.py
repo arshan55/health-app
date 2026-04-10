@@ -19,22 +19,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY", ""))
 
 class AIService:
     def __init__(self):
-        self.chat_model = genai.GenerativeModel('gemini-1.5-flash')
-        self.vision_model = genai.GenerativeModel('gemini-1.5-pro')
-
-    async def get_health_advice(self, user_query: str, history: list = []) -> str:
-        """
-        Provides short, practical nutrition advice.
-        Problem alignment: Personalized behavior-based suggestions.
-        """
-        try:
-            chat = self.chat_model.start_chat()
-            prompt = f"You are a retro-tech health assistant. Keep responses short, practical, and highly actionable. User asks: {user_query}"
-            response = chat.send_message(prompt)
-            return response.text
-        except Exception as e:
-            logger.error(f"AI Chat Error: {e}")
-            return "SYSTEM ERROR: NEURAL LINK FAILED. TRY AGAIN."
+        self.vision_model = genai.GenerativeModel('gemini-2.0-flash')
 
     async def analyze_food_image(self, image_data: bytes) -> Dict:
         """

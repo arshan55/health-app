@@ -30,7 +30,7 @@ steps:
       - 'managed'
       - '--allow-unauthenticated'
       - '--set-env-vars'
-      - 'DATABASE_URL=sqlite+aiosqlite:///./nutriguide.db,SECRET_KEY=$$SECRET_KEY,GEMINI_API_KEY=$$GEMINI_API_KEY'
+      - 'DATABASE_URL=sqlite+aiosqlite:///./nutriguide.db'
       - '--update-secrets'
       - 'SECRET_KEY=nutriguide-secret-key:latest,GEMINI_API_KEY=nutriguide-gemini-key:latest'
     id: 'Deploy Backend'
