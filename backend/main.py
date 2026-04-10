@@ -23,13 +23,13 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# CORS Configuration for Frontend & Deployment
+# Security Posture: Tighten CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust in production
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["*"],  # Allows public access. In strict production, map to frontend domain
+    allow_credentials=False, # Must be false when using wildcard origins
+    allow_methods=["GET", "POST", "OPTIONS"], # Restricted explicit methods
+    allow_headers=["Authorization", "Content-Type"], # Restricted explicit headers
 )
 
 @app.get("/health", tags=["System"])

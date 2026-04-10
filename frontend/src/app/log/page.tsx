@@ -129,11 +129,11 @@ export default function LogPage() {
             </>
           )}
         </div>
-        <button className="btn-secondary" style={{ width: '100%' }} onClick={() => fileInputRef.current?.click()}>
+        <button className="btn-secondary" style={{ width: '100%' }} onClick={() => fileInputRef.current?.click()} aria-label="Upload photo from device">
           Upload Photo
         </button>
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 }

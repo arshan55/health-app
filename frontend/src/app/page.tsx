@@ -99,7 +99,7 @@ export default function Home() {
       </div>
 
       <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <Link href="/log" className="btn-primary">Log a Meal</Link>
+        <Link href="/log" className="btn-primary" aria-label="Navigate to log a meal page">Log a Meal</Link>
       </div>
     </div>
   );
