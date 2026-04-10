@@ -1,14 +1,21 @@
 import google.generativeai as genai
 import os
+from pathlib import Path
 from typing import Optional, Dict
 import logging
 import io
 from PIL import Image
+from dotenv import load_dotenv
+
+# Load .env from root or backend directory (works regardless of where uvicorn is launched)
+_root = Path(__file__).resolve().parents[2]  # project root
+load_dotenv(_root / ".env")
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")  # backend/.env fallback
 
 logger = logging.getLogger(__name__)
 
-# Production ready Gemini config for GCPVertex AI / Google AI
-genai.configure(api_key=os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_KEY"))
+# Configure Gemini with the loaded API key
+genai.configure(api_key=os.getenv("GEMINI_API_KEY", ""))
 
 class AIService:
     def __init__(self):
