@@ -1,0 +1,15 @@
+fastapi[all]
+pydantic[email]
+pydantic-settings
+sqlalchemy
+aiosqlite
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
+google-generativeai
+pillow
+pytest
+httpx
+python-multipart
+python-dotenv
+uvicorn
