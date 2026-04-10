@@ -28,8 +28,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows public access. In strict production, map to frontend domain
     allow_credentials=False, # Must be false when using wildcard origins
-    allow_methods=["GET", "POST", "OPTIONS"], # Restricted explicit methods
-    allow_headers=["Authorization", "Content-Type"], # Restricted explicit headers
+    allow_methods=["*"], 
+    allow_headers=["*"], 
 )
 
 @app.get("/health", tags=["System"])
