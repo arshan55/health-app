@@ -1,6 +1,6 @@
 import pytest
-from backend.services.nutrition_service import NutritionService
-from backend.utils.auth import create_access_token, verify_password, get_password_hash
+from services.nutrition_service import NutritionService
+from utils.auth import create_access_token, verify_password, get_password_hash
 
 def test_bmi_calculation():
     service = NutritionService()

@@ -2,6 +2,18 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 steps:
+  # ─── TESTING & LINTING ────────────────────────────────────────────────────
+
+  # Run Python Pytest for Backend
+  - name: 'python:3.11-slim'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+        pip install -r backend/requirements.txt
+        cd backend && PYTHONPATH=. pytest tests/
+    id: 'Backend Tests'
+
   # ─── BACKEND ──────────────────────────────────────────────────────────────
 
   # Build Backend Docker image
